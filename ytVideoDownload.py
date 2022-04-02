@@ -19,8 +19,8 @@ for url in urls:
     yt = YouTube(url)
 
 
-    # extract only highest quality audio
-    video = yt.streams.filter(only_audio=True).order_by('resolution').desc().first()
+    # extract audio
+    video = yt.streams.filter(only_audio=True).first()
 
     #comment the above line and uncomment the below to download mp4 file
     #video = yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
