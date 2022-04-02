@@ -19,9 +19,13 @@ for url in urls:
     yt = YouTube(url)
 
 
-    # extract only audio
-    video = yt.streams.filter(only_audio=True).first()
+    # extract only highest quality audio
+    video = yt.streams.filter(only_audio=True).order_by('resolution').desc().first()
 
+    #comment the above line and uncomment the below to download mp4 file
+    #video = yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
+
+    #change below to your destination dir path
     destination = '/home/raghav/Music/bhajans'
 
     # download the file
@@ -29,6 +33,7 @@ for url in urls:
 
     # save the file
     base, ext = os.path.splitext(out_file)
+    #replace mp3 by mp4 for video downloads
     new_file = base + '.mp3'
     os.rename(out_file, new_file)
 
