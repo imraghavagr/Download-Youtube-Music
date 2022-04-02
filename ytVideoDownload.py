@@ -9,6 +9,8 @@ songs_urls = open('links.txt','r')
 #read all the lines of links.txt file and store them inside a list, here, 'urls'
 urls = songs_urls.readlines()
 
+songs_urls.close()
+
 #type of each url will be a string
 #print(type(urls[0]))
 
