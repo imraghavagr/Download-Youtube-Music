@@ -1,5 +1,5 @@
 # Download-Youtube-Music
-## A simple python script to download all the youtube videos in mp3/mp4 format.
+## A simple python script to download all the youtube videos given inside a txt file, in mp3/mp4 format.
 <br> 
 
 - Run the following command for install pytube library
