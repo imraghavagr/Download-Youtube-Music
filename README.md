@@ -13,3 +13,4 @@ python -m pip install --upgrade pytube
 - In links.txt file, replace the urls with all the youtube video urls of your choice. 
 - You can also download videos in mp4 format. 
 - For downloading videos in mp4 format, make the changes that are instructed in comments in ytVideoDownload.py file.
+- For more details visit [pytube documentation page](https://pytube.io/en/latest/).
