@@ -33,6 +33,7 @@ for url in urls:
 
     # save the file
     base, ext = os.path.splitext(out_file)
+    
     #replace mp3 by mp4 for video downloads
     new_file = base + '.mp3'
     os.rename(out_file, new_file)
